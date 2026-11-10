@@ -1,0 +1,47 @@
+name: Publish UoM English timetable
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: uom-english-timetable
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch official ICS and format in English
+        env:
+          UPSTREAM_ICS_URL: ${{ secrets.UPSTREAM_ICS_URL }}
+        run: |
+          set -euo pipefail
+          if [ -z "$UPSTREAM_ICS_URL" ]; then
+            echo 'Configure UPSTREAM_ICS_URL in repository Actions secrets' >&2
+            exit 1
+          fi
+          python3 calendar/format_calendar.py
+          printf '<!doctype html><html lang="en"><meta charset="utf-8"><title>University Calendar</title><body><p>UoM English timetable subscription: <a href="timetable.ics">timetable.ics</a></p></body></html>' > site/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
