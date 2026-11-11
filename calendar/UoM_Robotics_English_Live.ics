@@ -4240,4 +4240,29 @@ DESCRIPTION:Event Type: Postgraduate Research Open Day\nStart Tim
  ter.ac.uk/pgr/pgropenday2026/schedule
 STATUS:CONFIRMED
 END:VEVENT
+BEGIN:VEVENT
+UID:eventbrite-2001162173932-20261117@uom-robot-calendar
+DTSTAMP:20261111T133000Z
+DTSTART:20261117T090000Z
+DTEND:20261117T163000Z
+SUMMARY:[SHOWCASE] Robotics Innovation Showcase 2026 - From potentia
+ l to progress
+LOCATION:Sister - Renold Building\, 32a Altrincham Street\, Manchest
+ er M1 7JR\, United Kingdom
+DESCRIPTION:Event Type: Robotics and AI Innovation Showcase\nStart T
+ ime: 09:00 (Europe/London)\nEnd Time: 16:30 (Europe/London)\nLocati
+ on: Sister - Renold Building\, 32a Altrincham Street\, Manchester M
+ 1 7JR\, United Kingdom\nHost / Organizer: The University of Manches
+ ter Centre for Robotics and AI (Manchester RAI)\nDelivery Mode: In 
+ Person\nOther Information: Robotics research demonstrations\, panel
+ s\, keynote talks\, industry collaboration\, networking and funding
+  opportunities. RAINZ CDT is among the participating initiatives.\n
+ Registration: Expression of Interest does not guarantee attendance.
+  Verify your confirmation status.\nEvent Page: https://www.eventbri
+ te.com/e/robotics-innovation-showcase-2026-from-potential-to-progre
+ ss-tickets-2001162173932
+STATUS:CONFIRMED
+URL:https://www.eventbrite.com/e/robotics-innovation-showcase-2026-f
+ rom-potential-to-progress-tickets-2001162173932
+END:VEVENT
 END:VCALENDAR
