@@ -112,7 +112,7 @@ def format_ics(raw):
                 "DTEND:20261111T143000Z",
                 "SUMMARY:"+esc("[PHD OPEN DAY] How to Apply for a PhD | Talk & Q&A"),
                 "LOCATION:"+esc("Nancy Rothwell Building · Lecture Theatre A (First Floor)"),
-                "DESCRIPTION:"+esc("Event Type: Postgraduate Research Open Day\\nStart Time: 13:00 (Europe/London)\\nEnd Time: 14:30 (Europe/London)\\nLocation: Nancy Rothwell Building - Lecture Theatre A (First Floor)\\nHost / Instructor: Faculty of Science and Engineering (individual speaker not specified)\\nDelivery Mode: In Person; livestream also available\\nOther Information: Funding, entry requirements, finding a supervisor and PhD application Q&A. Conflicts with the 14:00 laboratory session.\\nOfficial Schedule: https://www.scieng.manchester.ac.uk/pgr/pgropenday2026/schedule"),
+                "DESCRIPTION:"+esc("Event Type: Postgraduate Research Open Day\nStart Time: 13:00 (Europe/London)\nEnd Time: 14:30 (Europe/London)\nLocation: Nancy Rothwell Building - Lecture Theatre A (First Floor)\nHost / Instructor: Faculty of Science and Engineering (individual speaker not specified)\nDelivery Mode: In Person; livestream also available\nOther Information: Funding, entry requirements, finding a supervisor and PhD application Q&A. Conflicts with the 14:00 laboratory session.\nOfficial Schedule: https://www.scieng.manchester.ac.uk/pgr/pgropenday2026/schedule"),
                 "STATUS:CONFIRMED",
                 "END:VEVENT"
             ])
