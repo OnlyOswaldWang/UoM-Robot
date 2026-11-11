@@ -4221,5 +4221,23 @@ END:VEVENT
 X-WR-CALNAME:UoM | Robotics Timetable
 X-WR-CALDESC:English University of Manchester timetable
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
+BEGIN:VEVENT
+UID:uom-fse-pgr-open-day-apply-phd-20261111@uom-robot-calendar
+DTSTAMP:20261111T090000Z
+DTSTART:20261111T130000Z
+DTEND:20261111T143000Z
+SUMMARY:[PHD OPEN DAY] How to Apply for a PhD | Talk & Q&A
+LOCATION:Nancy Rothwell Building - Lecture Theatre A (First Floor
+ )
+DESCRIPTION:Event Type: Postgraduate Research Open Day\nStart Tim
+ e: 13:00 (Europe/London)\nEnd Time: 14:30 (Europe/London)\nLocati
+ on: Nancy Rothwell Building - Lecture Theatre A (First Floor)\nHo
+ st / Instructor: Faculty of Science and Engineering (individual s
+ peaker not specified)\nDelivery Mode: In Person\; livestream also
+  available\nOther Information: Funding\, entry requirements\, fin
+ ding a supervisor and PhD application Q&A. Conflicts with 14:00 l
+ aboratory session.\nOfficial Schedule: https://www.scieng.manches
+ ter.ac.uk/pgr/pgropenday2026/schedule
+STATUS:CONFIRMED
+END:VEVENT
 END:VCALENDAR
-
