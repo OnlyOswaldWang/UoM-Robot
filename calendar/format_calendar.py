@@ -112,8 +112,8 @@ def format_ics(raw):
                     if not re.fullmatch(r"[A-Za-z0-9._@-]+", uid):
                         raise ValueError("Invalid manual event UID")
                     start_utc, end_utc = event["start_utc"], event["end_utc"]
-                    if not (re.fullmatch(r"\\d{8}T\\d{6}Z", start_utc) and
-                            re.fullmatch(r"\\d{8}T\\d{6}Z", end_utc)):
+                    if not (re.fullmatch(r"\d{8}T\d{6}Z", start_utc) and
+                            re.fullmatch(r"\d{8}T\d{6}Z", end_utc)):
                         raise ValueError("Invalid manual event time")
                     output.extend([
                         "BEGIN:VEVENT",
@@ -123,7 +123,7 @@ def format_ics(raw):
                         "DTEND:" + end_utc,
                         "SUMMARY:" + esc(event["title"]),
                         "LOCATION:" + esc(event["location"]),
-                        "DESCRIPTION:" + esc("\\n".join(event["description"])),
+                        "DESCRIPTION:" + esc("\n".join(event["description"])),
                         "STATUS:CONFIRMED",
                         "URL:" + event["url"],
                         "END:VEVENT",
