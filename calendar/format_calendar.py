@@ -103,6 +103,19 @@ def format_ics(raw):
             continue
         if line.startswith(("X-WR-CALNAME:","X-WR-CALDESC:")):continue
         if line=="END:VCALENDAR":
+            # Independently scheduled event: retained through every official ICS refresh.
+            output.extend([
+                "BEGIN:VEVENT",
+                "UID:uom-fse-pgr-open-day-apply-phd-20261111@uom-robot-calendar",
+                "DTSTAMP:20261111T090000Z",
+                "DTSTART:20261111T130000Z",
+                "DTEND:20261111T143000Z",
+                "SUMMARY:"+esc("[PHD OPEN DAY] How to Apply for a PhD | Talk & Q&A"),
+                "LOCATION:"+esc("Nancy Rothwell Building · Lecture Theatre A (First Floor)"),
+                "DESCRIPTION:"+esc("Event Type: Postgraduate Research Open Day\\nStart Time: 13:00 (Europe/London)\\nEnd Time: 14:30 (Europe/London)\\nLocation: Nancy Rothwell Building - Lecture Theatre A (First Floor)\\nHost / Instructor: Faculty of Science and Engineering (individual speaker not specified)\\nDelivery Mode: In Person; livestream also available\\nOther Information: Funding, entry requirements, finding a supervisor and PhD application Q&A. Conflicts with the 14:00 laboratory session.\\nOfficial Schedule: https://www.scieng.manchester.ac.uk/pgr/pgropenday2026/schedule"),
+                "STATUS:CONFIRMED",
+                "END:VEVENT"
+            ])
             output+=["X-WR-CALNAME:UoM | Robotics Timetable","X-WR-CALDESC:English University of Manchester timetable","REFRESH-INTERVAL;VALUE=DURATION:PT1H"]
         output.append(line)
     if in_evt or count==0:raise ValueError("No complete events found")
